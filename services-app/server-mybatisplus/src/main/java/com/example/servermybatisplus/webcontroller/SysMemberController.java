@@ -1,4 +1,4 @@
-package com.example.servermybatisplus.webController;
+package com.example.servermybatisplus.webcontroller;
 
 import com.example.servermybatisplus.component.RedisSeqFactory;
 import com.example.servermybatisplus.entity.SysMember;

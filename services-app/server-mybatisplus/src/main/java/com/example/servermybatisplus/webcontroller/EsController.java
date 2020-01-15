@@ -1,7 +1,5 @@
-package com.example.servermybatisplus.webController;
+package com.example.servermybatisplus.webcontroller;
 
-import com.example.servermybatisplus.entity.BaseCase;
-import com.example.servermybatisplus.entity.Personal;
 import com.example.servermybatisplus.service.ICaseFollowupRecordService;
 import com.example.servermybatisplus.service.IPersonalService;
 import com.example.servermybatisplus.service.impl.CaseFollowupRecordServiceFetch;
