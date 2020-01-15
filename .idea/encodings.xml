@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-app/server-downtime" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-app/server-mybatisplus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-app/server-springdatajpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-soa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-soa/server-bus-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-soa/server-chain-sleuth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-soa/server-config-springconfig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-soa/server-ops-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services-soa/server-registry-eureka" charset="UTF-8" />
+  </component>
+</project>

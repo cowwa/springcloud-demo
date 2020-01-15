@@ -1,0 +1,38 @@
+
+server:
+  port: 9412
+
+spring:
+  application:
+    name: sleuth-demo
+  messages:
+    basename: i18n/messages
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1.0
+  rabbitmq:
+    host: 192.168.3.2
+    username: dev
+    password: dev
+    virtual-host: dev
+    port: 5672
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
+
+eureka:
+  instance:
+    hostname: sleuth-demo
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+       defaultZone: http://192.168.3.68:8761/eureka/
+

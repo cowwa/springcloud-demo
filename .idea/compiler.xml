@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="server-bus-gateway" />
+        <module name="server-chain-sleuth" />
+        <module name="server-config-springconfig" />
+        <module name="server-downtime" />
+        <module name="server-mybatisplus" />
+        <module name="server-ops-admin" />
+        <module name="server-registry-eureka" />
+        <module name="server-springdatajpa" />
+        <module name="services-app" />
+        <module name="services-core" />
+        <module name="services-soa" />
+        <module name="springcloud-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="server-bus-gateway" target="1.8" />
+      <module name="server-chain-sleuth" target="1.8" />
+      <module name="server-config-springconfig" target="1.8" />
+      <module name="server-downtime" target="1.8" />
+      <module name="server-mybatisplus" target="1.8" />
+      <module name="server-ops-admin" target="1.8" />
+      <module name="server-registry-eureka" target="1.8" />
+      <module name="server-springdatajpa" target="1.8" />
+      <module name="services-app" target="1.8" />
+      <module name="services-core" target="1.8" />
+      <module name="services-soa" target="1.8" />
+      <module name="springcloud-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

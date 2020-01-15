@@ -1,0 +1,26 @@
+
+server:
+  port: 8763
+spring:
+  application:
+    name: server-ops-admin
+eureka:
+  instance:
+    hostname: server-ops-admin
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+          startup: ${random.int}
+  client:
+    service-url:
+       defaultZone: http://192.168.3.68:8761/eureka/
+    registry-fetch-interval-seconds: 5
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

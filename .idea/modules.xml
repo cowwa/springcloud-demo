@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/services-soa/server-bus-gateway/server-bus-gateway.iml" filepath="$PROJECT_DIR$/services-soa/server-bus-gateway/server-bus-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-soa/server-chain-sleuth/server-chain-sleuth.iml" filepath="$PROJECT_DIR$/services-soa/server-chain-sleuth/server-chain-sleuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-soa/server-config-springconfig/server-config-springconfig.iml" filepath="$PROJECT_DIR$/services-soa/server-config-springconfig/server-config-springconfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-app/server-downtime/server-downtime.iml" filepath="$PROJECT_DIR$/services-app/server-downtime/server-downtime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-app/server-mybatisplus/server-mybatisplus.iml" filepath="$PROJECT_DIR$/services-app/server-mybatisplus/server-mybatisplus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-soa/server-ops-admin/server-ops-admin.iml" filepath="$PROJECT_DIR$/services-soa/server-ops-admin/server-ops-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-soa/server-registry-eureka/server-registry-eureka.iml" filepath="$PROJECT_DIR$/services-soa/server-registry-eureka/server-registry-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-app/server-springdatajpa/server-springdatajpa.iml" filepath="$PROJECT_DIR$/services-app/server-springdatajpa/server-springdatajpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-app/services-app.iml" filepath="$PROJECT_DIR$/services-app/services-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-core/services-core.iml" filepath="$PROJECT_DIR$/services-core/services-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services-soa/services-soa.iml" filepath="$PROJECT_DIR$/services-soa/services-soa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-demo.iml" filepath="$PROJECT_DIR$/springcloud-demo.iml" />
+    </modules>
+  </component>
+</project>
