@@ -13,17 +13,11 @@ spring:
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
-      ## 连接池名字
     pool-name: MyHikariCP
-      ## 最小空闲连接数量
     minimum-idle: 10
-      ## 空闲连接存活最大时间，默认600000（10分钟）
     idle-timeout: 600000
-              ## 连接池最大连接数，默认是10
     maximum-pool-size: 100
-      ## 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
     max-lifetime: 1800000
-      ## 数据库连接超时时间,默认30秒，即30000
     connection-timeout: 30000
 
 
@@ -36,3 +30,12 @@ eureka:
     fetchRegistry: true
     service-url:
        defaultZone: http://192.168.3.68:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
