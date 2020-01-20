@@ -17,6 +17,13 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	<modules>
+		<module>server-downtime</module>
+		<module>server-mybatisplus</module>
+		<module>server-springdatajpa</module>
+		<module>server-webflux</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<dependencies>
 		<dependency>
