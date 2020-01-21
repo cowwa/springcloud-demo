@@ -1,4 +1,4 @@
-package com.example.serverwebflux.serverwebflux;
+package com.example.serverwebflux.webcontroller;
 
 import com.example.serverwebflux.entity.Personal;
 import com.example.serverwebflux.repository.PersonalRepository;
@@ -15,7 +15,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.time.Duration;
-import java.time.LocalTime;
 
 /**
  * @author: cowwa

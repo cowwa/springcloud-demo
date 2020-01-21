@@ -1,4 +1,4 @@
-package com.example.serverwebflux.serverwebflux;
+package com.example.serverwebflux.webcontroller;
 
 
 import com.example.serverwebflux.entity.Personal;
@@ -6,7 +6,6 @@ import com.example.serverwebflux.repository.PersonalRepository;
 import com.example.servicescore.BaseController;
 import com.example.servicescore.exception.BusinessException;
 
-import com.example.servicescore.response.ResponseData;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.util.StopWatch;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
