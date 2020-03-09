@@ -10,7 +10,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @author cowwa
  */
 @EnableDiscoveryClient
-@EnableAutoConfiguration
 @EnableAdminServer
 @SpringBootApplication
 public class ServerOpsAdminApplication {

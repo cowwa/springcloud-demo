@@ -1,0 +1,29 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: webscoket-demo
+  messages:
+    basename: i18n/messages
+
+
+
+eureka:
+  instance:
+    hostname: webscoket-demo
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+       defaultZone: http://192.168.3.68:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
