@@ -14,7 +14,7 @@ spring:
     sampler:
       probability: 1.0
   rabbitmq:
-    host: 192.168.3.2
+    host: 182.92.217.197
     username: dev
     password: dev
     virtual-host: dev
@@ -34,5 +34,5 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-       defaultZone: http://192.168.3.68:8761/eureka/
+       defaultZone: http://localhost:8761/eureka/
 

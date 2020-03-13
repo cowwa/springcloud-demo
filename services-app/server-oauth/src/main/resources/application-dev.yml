@@ -1,10 +1,10 @@
 
 server:
-  port: 8090
+  port: 8093
 
 spring:
   application:
-    name: datajpa-demo
+    name: oauth-demo
   messages:
     basename: i18n/messages
   rabbitmq:
@@ -23,38 +23,38 @@ spring:
       probability: 1.0
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://182.92.217.197:5432/faxin_test?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:postgresql://182.92.217.197:5432/oauth_demo?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: postgres
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
-    ## è¿æ¥æ± åå­—
+    ## Á¬½Ó³ØÃû×Ö
     pool-name: MyHikariCP
-    ## æœ€å°ç©ºé—²è¿æ¥æ•°é‡
+    ## ×îĞ¡¿ÕÏĞÁ¬½ÓÊıÁ¿
     minimum-idle: 10
-    ## ç©ºé—²è¿æ¥å­˜æ´»æœ€å¤§æ—¶é—´ï¼Œé»˜è®¤600000ï¼ˆ10åˆ†é’Ÿï¼‰
+    ## ¿ÕÏĞÁ¬½Ó´æ»î×î´óÊ±¼ä£¬Ä¬ÈÏ600000£¨10·ÖÖÓ£©
     idle-timeout: 600000
-            ## è¿æ¥æ± æœ€å¤§è¿æ¥æ•°ï¼Œé»˜è®¤æ˜¯10
+    ## Á¬½Ó³Ø×î´óÁ¬½ÓÊı£¬Ä¬ÈÏÊÇ10
     maximum-pool-size: 100
-    ## æ­¤å±æ€§æ§åˆ¶æ± ä¸­è¿æ¥çš„æœ€é•¿ç”Ÿå‘½å‘¨æœŸï¼Œå€¼0è¡¨ç¤ºæ— é™ç”Ÿå‘½å‘¨æœŸï¼Œé»˜è®¤1800000å³30åˆ†é’Ÿ
+    ## ´ËÊôĞÔ¿ØÖÆ³ØÖĞÁ¬½ÓµÄ×î³¤ÉúÃüÖÜÆÚ£¬Öµ0±íÊ¾ÎŞÏŞÉúÃüÖÜÆÚ£¬Ä¬ÈÏ1800000¼´30·ÖÖÓ
     max-lifetime: 1800000
-    ## æ•°æ®åº“è¿æ¥è¶…æ—¶æ—¶é—´,é»˜è®¤30ç§’ï¼Œå³30000
+    ## Êı¾İ¿âÁ¬½Ó³¬Ê±Ê±¼ä,Ä¬ÈÏ30Ãë£¬¼´30000
     connection-timeout: 30000
   redis:
     port: 4307
     host: 182.92.217.197
     database: 0
+    password: redis123456
     lettuce:
       pool:
-        # è¿æ¥æ± æœ€å¤§è¿æ¥æ•°é»˜è®¤ä¸º8ï¼Œè´Ÿæ•°ä»£è¡¨ä¸é™åˆ¶
+        # Á¬½Ó³Ø×î´óÁ¬½ÓÊıÄ¬ÈÏÎª8£¬¸ºÊı´ú±í²»ÏŞÖÆ
         max-active: 8
-        # è¿æ¥æ± æœ€å¤§é˜»å¡ç­‰å¾…æ—¶é—´(ä½¿ç”¨è´Ÿå€¼è¡¨ç¤ºæ²¡æœ‰é™åˆ¶) é»˜è®¤ä¸º-1
+        # Á¬½Ó³Ø×î´ó×èÈûµÈ´ıÊ±¼ä(Ê¹ÓÃ¸ºÖµ±íÊ¾Ã»ÓĞÏŞÖÆ) Ä¬ÈÏÎª-1
         max-wait: -1ms
-        # è¿æ¥æ± ä¸­çš„æœ€å¤§ç©ºé—²è¿æ¥ é»˜è®¤ä¸º8
+        # Á¬½Ó³ØÖĞµÄ×î´ó¿ÕÏĞÁ¬½Ó Ä¬ÈÏÎª8
         max-idle: 8
-        # è¿æ¥æ± ä¸­çš„æœ€å°ç©ºé—²è¿æ¥ é»˜è®¤ä¸º 0
+        # Á¬½Ó³ØÖĞµÄ×îĞ¡¿ÕÏĞÁ¬½Ó Ä¬ÈÏÎª 0
         min-idle: 0
-    password: redis123456
 
 thread:
   pool:
@@ -65,13 +65,13 @@ thread:
     name-prefix: async-service-
 eureka:
   instance:
-    hostname: datajpa-demo
+    hostname: oauth-demo
     prefer-ip-address: true
   client:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-       defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 management:
   endpoints:
     web:
@@ -80,3 +80,4 @@ management:
   endpoint:
     health:
       show-details: always
+

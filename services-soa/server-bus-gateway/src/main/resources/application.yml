@@ -6,7 +6,7 @@ spring:
   application:
     name: spring-gateway
   rabbitmq:
-    host: 192.168.3.2
+    host: 182.92.217.197
     username: dev
     password: dev
     virtual-host: dev
@@ -41,8 +41,8 @@ spring:
             name: fallbackcmd
             fallbackUri: forward:/downtimeBack
   redis:
-    port: 6379
-    host: 127.0.0.1
+    port: 4307
+    host: 182.92.217.197
     database: 0
     lettuce:
       pool:
@@ -54,6 +54,7 @@ spring:
         max-idle: 8
         # 连接池中的最小空闲连接 默认为 0
         min-idle: 0
+    password: redis123456
 eureka:
   instance:
     hostname: spring-gateway
@@ -62,7 +63,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-       defaultZone: http://192.168.3.68:8761/eureka/
+       defaultZone: http://localhost:8761/eureka/
 
 management:
   endpoints:

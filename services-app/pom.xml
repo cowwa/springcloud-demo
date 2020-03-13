@@ -22,8 +22,8 @@
 		<module>server-mybatisplus</module>
 		<module>server-springdatajpa</module>
 		<module>server-webflux</module>
-		<module>server-websocket
-		</module>
+		<module>server-websocket</module>
+		<module>server-oauth</module>
 	</modules>
 	<packaging>pom</packaging>
 

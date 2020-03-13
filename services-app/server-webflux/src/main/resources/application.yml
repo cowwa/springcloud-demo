@@ -8,7 +8,7 @@ spring:
     basename: i18n/messages
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.3.3:5432/faxin_test?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:postgresql://182.92.217.197:5432/faxin_test?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: postgres
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
@@ -29,7 +29,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-       defaultZone: http://192.168.3.68:8761/eureka/
+       defaultZone: http://localhost:8761/eureka/
 
 management:
   endpoints:
