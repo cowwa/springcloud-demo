@@ -9,7 +9,7 @@ spring:
       server:
         git:
           ##git 配置
-          uri: file:///D:\work\cloud-config-demo
+          uri: file:///E:\work\cowwa\project\server\cloud-config-demo
           username: 627898194@qq.com
           password: psw0719#xa
           default-label: master

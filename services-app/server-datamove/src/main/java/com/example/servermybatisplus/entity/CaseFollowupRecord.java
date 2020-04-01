@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.apache.ibatis.annotations.Options;
 import org.springframework.data.annotation.Id;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -35,7 +36,7 @@ import java.util.List;
 public class CaseFollowupRecord extends BaseEntity {
 
     @TableField("ID")
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.UUID)
     private String id;
 
     @ApiModelProperty(value = "客户信息ID")

@@ -2,6 +2,7 @@ package com.example.serverspringdatajpa.common;
 
 import com.querydsl.core.BooleanBuilder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author: cowwa
@@ -9,6 +10,7 @@ import lombok.Data;
  * @Description:
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 public abstract class BaseEntity  {
 
     public abstract BooleanBuilder builderQuery();

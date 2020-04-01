@@ -24,6 +24,7 @@
 		<module>server-webflux</module>
 		<module>server-websocket</module>
 		<module>server-oauth</module>
+		<module>server-datamove</module>
 	</modules>
 	<packaging>pom</packaging>
 

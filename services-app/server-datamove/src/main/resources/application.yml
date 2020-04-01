@@ -1,0 +1,54 @@
+server:
+  port: 9999
+
+thread:
+  pool:
+    core-size: 30
+    max-size: 80
+    queue-capacity: 500
+    keep-alive-seconds: 60
+    name-prefix: async-service-
+
+spring:
+  application:
+    name: server-datamove
+  messages:
+    basename: i18n/messages
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@192.168.0.32:1521/orcl
+    username: xdl2019
+    password: xdl2019
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      ## 连接池名字
+      pool-name: MyHikariCP
+      ## 最小空闲连接数量
+      minimum-idle: 10
+      ## 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 600000
+      ## 连接池最大连接数，默认是10
+      maximum-pool-size: 200
+      ## 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      max-lifetime: 1800000
+      ## 数据库连接超时时间,默认30秒，即30000
+    connection-timeout: 30000
+  data:
+    elasticsearch:
+      cluster-nodes: 192.168.100.90:9300,192.168.100.91:9300,192.168.100.97:9300
+      cluster-name: xdl_cluster
+    # 防止乱码
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

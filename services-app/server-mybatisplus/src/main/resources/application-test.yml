@@ -1,0 +1,102 @@
+server:
+  port: 8089
+  # spring session 超时时间设置
+  servlet:
+    session:
+      timeout: 30m
+
+thread:
+  pool:
+    core-size: 30
+    max-size: 100
+    queue-capacity: 500
+    keep-alive-seconds: 60
+    name-prefix: async-service-
+
+spring:
+  application:
+    name: mybatisplus-demo
+  messages:
+    basename: i18n/messages
+  redis:
+    host: 182.92.217.197
+    port: 4307
+    database: 0
+    password: redis123456
+    lettuce:
+      timeout: 30s
+      pool:
+        # 连接池最大连接数默认为8，负数代表不限制
+        max-active: 8
+        # 连接池最大阻塞等待时间(使用负值表示没有限制) 默认为-1
+        max-wait: -1ms
+        # 连接池中的最大空闲连接 默认为8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认为 0
+        min-idle: 0
+
+
+  rabbitmq:
+    host: 182.92.217.197
+    username: dev
+    password: dev
+    virtual-host: dev
+    port: 5672
+  zipkin:
+    sender:
+      type: rabbit
+    rabbitmq:
+      queue: zipkin
+  sleuth:
+    sampler:
+      probability: 1.0
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://182.92.217.197:5432/faxin_test?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: postgres
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      ## 连接池名字
+      pool-name: MyHikariCP
+      ## 最小空闲连接数量
+      minimum-idle: 10
+      ## 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 600000
+      ## 连接池最大连接数，默认是10
+      maximum-pool-size: 100
+      ## 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      max-lifetime: 1800000
+      ## 数据库连接超时时间,默认30秒，即30000
+    connection-timeout: 30000
+    # 防止乱码
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on-save
+      namespace: test:session
+
+
+eureka:
+  instance:
+    hostname: mybatisplus-demo
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
